@@ -1,0 +1,44 @@
+.section {
+  padding-top: 60px;
+  color: $background-portfolio;
+  @include for-size(desktop) {
+    padding-top: 94px;
+  }
+}
+
+.section-command {
+  background: $background-color;
+  margin-top: 60px;
+
+  @include for-size(desktop) {
+    margin-top: 90px;
+  }
+}
+
+.section-classes {
+  @media screen and (max-width: 1999px) {
+    display: none;
+  }
+
+  @include for-size(desktop) {
+    display: block;
+  }
+}
+
+.section-filters {
+  padding-bottom: 40px;
+  padding-top: 90px;
+
+  @include for-size(tablet) {
+    padding-bottom: 30px;
+  }
+
+  @include for-size(tablet) {
+    justify-content: center;
+    margin-bottom: 0;
+  }
+
+  @include for-size(desktop) {
+    margin-bottom: 50px;
+  }
+}

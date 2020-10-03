@@ -1,0 +1,62 @@
+.page-header {
+  display: inline-flex;
+  border-bottom: 1px solid #ececec;
+  position: relative;
+  height: 60px;
+  align-items: center;
+  width: 100%;
+
+  @include for-size(tablet) {
+    height: 80px;
+  }
+}
+
+.tablet {
+  position: relative;
+  width: 100%;
+
+  @include for-size(tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  top: 0;
+  right: 0;
+
+  &:focus .icon-cross,
+  &:focus .icon-menu {
+    fill: $accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-button .icon-cross {
+  display: none;
+}
+
+.menu-button.is-open .icon-cross {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.nav {
+  padding-top: 60px;
+
+  @include for-size(tablet) {
+    padding-top: 0;
+  }
+}

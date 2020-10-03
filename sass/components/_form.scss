@@ -1,0 +1,88 @@
+.form-label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--primarily-text-color);
+  position: absolute;
+  top: -16px;
+  left: 0;
+}
+
+.form-input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 448px;
+  height: 40px;
+  padding-left: 42px;
+
+  &:focus {
+    border: solid 1px $accent-color;
+    border-radius: 4px;
+    outline: none;
+    -webkit-transition: 250ms $timing;
+    transition: 250ms $timing;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 370px;
+  }
+}
+
+textarea {
+  resize: none;
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  &:focus {
+    border: solid 1px $accent-color;
+    border-radius: 4px;
+    outline: none;
+    -webkit-transition: 250ms $timing;
+    transition: 250ms $timing;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: 370px;
+  }
+}
+
+.form-checked {
+  text-align: center;
+}
+
+.checkbox-box {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  border: 2px solid $title-text-color;
+  left: 0;
+  top: 1px;
+  border-radius: 2px;
+}
+
+.checked-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect 0 0 0 0;
+  overflow: hidden;
+
+  &:checked ~ .checkbox-box {
+    border-color: $accent-color;
+    background-image: url(../logo/iconcheck.svg);
+    background-color: $accent-color;
+    background-origin: border-box;
+    background-size: contain;
+  }
+}

@@ -1,0 +1,63 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  background-color: #2f303a;
+  background-image: linear-gradient(#2f303a66, rgba(47, 48, 58, 0.4)),
+    url(/..img/mobile/Header_img.webp), url(../img/mobile/Header_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $primary-bg-color;
+  max-width: 100%;
+  height: 400px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(#2f303a66, rgba(47, 48, 58, 0.4)),
+      url(../img/mobile/Header_img@2x), url(../img/mobile/Header_img@2x.jpg);
+  }
+
+  @include for-size(tablet) {
+    background-image: linear-gradient(#2f303a66, rgba(47, 48, 58, 0.4)),
+      url(../img/tablet/Header_img.webp), url(../img/tablet/Header_img.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(#2f303a66, rgba(47, 48, 58, 0.4)),
+        url(../img/tablet/Header_img@2x.webp),
+        url(../img/tablet/Header_img@2x.jpg);
+    }
+  }
+
+  @include for-size(desktop) {
+    height: 600px;
+    background-image: linear-gradient(#2f303a66, rgba(47, 48, 58, 0.4)),
+      url(../img/desktop/bcg.webp), url(../img/desktop/bcg.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(#2f303a66, rgba(47, 48, 58, 0.4)),
+        url(../img/desktop/bcg_2x.webp), url(../img/desktop/bcg@2x.jpg);
+    }
+  }
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+
+  &-title {
+    font-weight: 900;
+    font-size: 26px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include for-size(desktop) {
+      font-size: 44px;
+    }
+  }
+}
+

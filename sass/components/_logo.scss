@@ -1,0 +1,20 @@
+.logo {
+  color: $accent-color;
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo-header {
+  color: $title-text-color;
+  font-family: Raleway, sans-serif;
+  font-size: 26px;
+  line-height: 1.19;
+  margin-right: 90px;
+}
+
+.logo-conteiner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

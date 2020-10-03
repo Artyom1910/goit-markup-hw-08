@@ -1,0 +1,121 @@
+.item {
+  margin-right: 8px;
+  margin-bottom: 15px;
+}
+
+.works-card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(33, 150, 243, 0.9);
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 250ms $timing;
+  }
+}
+
+.works-action {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+  opacity: 0;
+  font-style: normal;
+  font-weight: normal;
+  color: $primary-bg-color;
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 0;
+  padding: 63px 24px;
+  transform: translateY(100%);
+  transition: transform 250ms $timing;
+}
+
+.portfolio-list {
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include for-size(desktop) {
+    margin: -30px;
+  }
+}
+
+.portfolio-list {
+  @include for-size(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include for-size(desktop) {
+    margin: -30px;
+  }
+}
+
+.works-item {
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+  & img {
+    width: 100%;
+  }
+
+  &:hover {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @include for-size(tablet) {
+    width: calc((100% - 30px) / 2);
+
+    &:nth-child(2n) {
+      margin-left: 30px;
+    }
+
+    @include for-size(desktop) {
+      width: calc((100% - 30px * 2) / 3);
+      margin-right: 30px;
+
+      &:nth-child(2n) {
+        margin-left: 0;
+      }
+
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.works-card:hover::before {
+  opacity: 1;
+}
+
+.works-item:hover .works-action,
+.works-item:hover .works-card::before {
+  opacity: 1;
+  transform: translateY(0);
+}
