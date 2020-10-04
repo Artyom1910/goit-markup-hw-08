@@ -1,20 +1,28 @@
 .logo {
   color: $accent-color;
   font-family: Raleway, sans-serif;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
+  
+
+
+
+  @include for-size(desktop) {
+    font-size: 26px;
+    line-height: 1.19;
+    
+  }
 }
 
 .logo-header {
   color: $title-text-color;
   font-family: Raleway, sans-serif;
-  font-size: 26px;
-  line-height: 1.19;
-  margin-right: 90px;
-}
+  font-size: 24px;
+  line-height: 1.16;
+  margin-right: 88px;
 
-.logo-conteiner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include for-size(desktop) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }

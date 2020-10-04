@@ -1,25 +1,20 @@
 .page-header {
-  display: inline-flex;
+  // display: inline-flex;
   border-bottom: 1px solid #ececec;
   position: relative;
   height: 60px;
   align-items: center;
-  width: 100%;
+  display: flex;
 
   @include for-size(tablet) {
     height: 80px;
   }
 }
 
-.tablet {
-  position: relative;
-  width: 100%;
-
-  @include for-size(tablet) {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.header-flex {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
 }
 
 .menu-button {
@@ -51,12 +46,4 @@
 
 .menu-button.is-open .icon-menu {
   display: none;
-}
-
-.nav {
-  padding-top: 60px;
-
-  @include for-size(tablet) {
-    padding-top: 0;
-  }
 }

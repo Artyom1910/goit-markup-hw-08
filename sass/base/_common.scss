@@ -14,14 +14,25 @@ a {
 }
 
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  // padding-left: 15px;
+  // padding-right: 15px;
+  // margin-right: auto;
+  // margin-left: auto;
+  width: 100%;
+  padding: 0px 15px;
+  margin: 0px auto;
 
   @include for-size(desktop) {
-    margin-right: auto;
-    margin-left: auto;
     width: 1200px;
   }
+
+  // @include for-size(mobile) {
+  //   width: 480px;
+  // }
+
+  // @include for-size(tablet) {
+  //   width: 768px;
+  // }
 }
 
 .list {
