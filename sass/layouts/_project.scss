@@ -38,6 +38,12 @@
   padding: 63px 24px;
   transform: translateY(100%);
   transition: transform 250ms $timing;
+
+  @include for-size(mmobile) {
+    font-size: 16px;
+    line-height: 1.14;
+    padding: 32px 24px;
+  }
 }
 
 .portfolio-list {
@@ -101,7 +107,6 @@
       &:nth-child(2n) {
         margin-left: 0;
       }
-
 
       &:nth-child(3n) {
         margin-right: 0;

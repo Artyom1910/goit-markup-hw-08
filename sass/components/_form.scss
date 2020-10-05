@@ -15,8 +15,9 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 4px;
-  width: 448px;
-  height: 40px;
+  width: 100%;
+  padding: 11px;
+  // height: 40px;
   padding-left: 42px;
 
   &:focus {
@@ -27,14 +28,14 @@
     transition: 250ms $timing;
   }
 
-  @media screen and (max-width: 1200px) {
-    width: 370px;
-  }
+  // @media screen and (max-width: 1200px) {
+  //   width: 370px;
+  // }
 }
 
 textarea {
   resize: none;
-  width: 448px;
+  width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   -webkit-box-sizing: border-box;
@@ -49,10 +50,8 @@ textarea {
     transition: 250ms $timing;
   }
 
-  @media screen and (max-width: 1200px) {
-    width: 370px;
-  }
 }
+
 
 .form-checked {
   text-align: center;
